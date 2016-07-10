@@ -16,7 +16,7 @@ my $w_module_path = sub {
     my $ctx  = shift;
     my $orig = $ctx->{orig};
 
-    my @mods = split /\s*[;,]\s*/, $config{-modules};
+    my @mods = split /\s*[;,]\s*/, $config{-module};
 
     if (grep { $_[0] eq $_ } @mods) {
         return undef;
